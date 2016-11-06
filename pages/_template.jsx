@@ -1,10 +1,10 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
+import { Container } from 'rebass'
 import { prefixLink } from 'gatsby-helpers'
-import '../css/markdown-styles'
 
 import { rhythm } from '../utils/typography'
+import Footer from '../components/footer'
 
 module.exports = React.createClass({
   propTypes () {
@@ -14,16 +14,11 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
+      <div className="wrapper">
+        <Container>
           {this.props.children}
         </Container>
+        <Footer/>
       </div>
     )
   },
