@@ -16,7 +16,7 @@ export default class Index extends React.Component {
           ]}
         />
         <h1>
-          Dinarte Jesus
+          Hello World
         </h1>
       </div>
     )
