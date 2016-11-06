@@ -20,7 +20,7 @@ export default class Index extends React.Component {
         <Avatar
           circle
           size={120}
-          src="http://lorempixel.com/64/64/cats"
+          src="https://avatars1.githubusercontent.com/u/6892132?v=3&s=466"
         />
         <Heading level={1}>Dinarte Jesus</Heading>
         <p>
