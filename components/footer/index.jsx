@@ -3,7 +3,7 @@ import { Container } from 'rebass'
 import { prefixLink } from 'gatsby-helpers'
 import { Link } from 'react-router'
 
-import './style.sass'
+import './style.scss'
 
 export default class Footer extends React.Component {
   render() {

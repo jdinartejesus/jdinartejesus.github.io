@@ -6,6 +6,8 @@ import { prefixLink } from 'gatsby-helpers'
 import { rhythm } from '../utils/typography'
 import Footer from '../components/footer'
 
+import '../styles/default.scss'
+
 module.exports = React.createClass({
   propTypes () {
     return {
@@ -17,8 +19,8 @@ module.exports = React.createClass({
       <div className="wrapper">
         <Container>
           {this.props.children}
+          <Footer/>
         </Container>
-        <Footer/>
       </div>
     )
   },

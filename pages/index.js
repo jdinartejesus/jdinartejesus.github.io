@@ -2,14 +2,20 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from "react-helmet"
-import { Avatar, Heading } from 'rebass'
+import { Section, Avatar, Heading, Text, Breadcrumbs } from 'rebass'
+import { SocialIcon } from 'react-social-icons';
 
 import { config } from 'config'
 
 export default class Index extends React.Component {
   render () {
+    const socialNetworks = [
+      'http://twitter.com/jdinartejesus',
+      'http://github.com/jdinartejesus',
+      'http://linkedin.com/in/jdinartejesus'
+    ]
     return (
-      <div className="description">
+      <div className="homepage" style={{textAlign: "center"}}>
         <Helmet
           title={config.siteTitle}
           meta={[
@@ -17,18 +23,25 @@ export default class Index extends React.Component {
             {"name": "keywords", "content": "portfolio, website, dinartejesus, jdinartejesus"},
           ]}
         />
-        <Avatar
-          circle
-          size={120}
-          src="https://avatars1.githubusercontent.com/u/6892132?v=3&s=466"
-        />
-        <Heading level={1}>Dinarte Jesus</Heading>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <header>
+          <Avatar circle size={192} src="./images/profile.jpg" />
+          <Heading level={1}>Dinarte Jesus</Heading>
+          <Heading level={3}>Front-End Developer - Entrepreneur - Human</Heading>
+        </header>
+        <main>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </Text>
+          <div className="social-networks">
+            {
+              socialNetworks.map(socialNetwork => {
+                return <SocialIcon url={socialNetwork} color="#526d7a" style={{ height: 30, width: 30, margin: 5 }} />
+              })
+            }
+          </div>
+        </main>
       </div>
     )
   }
