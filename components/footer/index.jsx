@@ -8,12 +8,12 @@ import './style.scss'
 export default class Footer extends React.Component {
   render() {
     return (
-      <div className="footer">
+      <footer>
         <Container>
           <hr/>
           <p>© 2016. Dinarte Jesus. Some Rights Reserved.</p>
         </Container>
-      </div>
+      </footer>
     )
   }
 };
