@@ -1,8 +1,7 @@
 @import './variables';
 
-html {
+html, body {
   background-color: $background-color;
-  margin: 3rem;
 }
 
 img {

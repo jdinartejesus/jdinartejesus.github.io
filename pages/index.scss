@@ -1,0 +1,32 @@
+.homepage {
+  $title-color: #444;
+  $subtitle-color: #777;
+  $links-color: #2b99ff;
+
+  header {
+    margin: 3rem 0 1rem;
+
+    .author {
+      color: $title-color;
+      margin: 0;
+    }
+
+    .interests {
+      color: $subtitle-color;
+      margin: 0;
+    }
+  }
+
+  main {
+    .introduction {
+      font-size: 16px;
+      margin: 1rem auto;
+      max-width: 700px;
+
+      a {
+        text-decoration: none;
+        color: $links-color;
+      }
+    }
+  }
+}

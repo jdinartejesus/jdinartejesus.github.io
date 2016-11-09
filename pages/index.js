@@ -6,6 +6,7 @@ import { Section, Avatar, Heading, Text, Breadcrumbs } from 'rebass'
 import { SocialIcon } from 'react-social-icons';
 
 import { config } from 'config'
+import './index.scss'
 
 export default class Index extends React.Component {
   render () {
@@ -25,19 +26,21 @@ export default class Index extends React.Component {
         />
         <header>
           <Avatar circle size={192} src="./images/profile.jpg" />
-          <Heading level={1}>Dinarte Jesus</Heading>
-          <Heading level={3}>Front-End Developer - Entrepreneur - Human</Heading>
+          <h1 className="author">Dinarte Jesus</h1>
+          <h3 className="interests">Front-End Developer - Entrepreneur - Human</h3>
         </header>
         <main>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </Text>
+          <div className="introduction">
+            <p>
+              Hey! I'm Dinarte, nice to meet you. I'm a developer passionate about web and startups.
+              I'm currently working at <a href="https://zenmate.com">@ZenMate</a> contributing for the freedom of the internet.
+              But I also love to work on other open source projects, like at <a href="https://mozilla.com">@Mozilla</a> and others also available on my Github!
+            </p>
+          </div>
           <div className="social-networks">
             {
               socialNetworks.map(socialNetwork => {
-                return <SocialIcon url={socialNetwork} color="#526d7a" style={{ height: 30, width: 30, margin: 5 }} />
+                return <SocialIcon url={socialNetwork} color="#526d7a" style={{ height: 31, width: 31, margin: 5 }} />
               })
             }
           </div>
