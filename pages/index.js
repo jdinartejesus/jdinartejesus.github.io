@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Helmet from "react-helmet"
+import Helmet from 'react-helmet'
 import { Section, Avatar, Heading, Text, Breadcrumbs } from 'rebass'
-import { SocialIcon } from 'react-social-icons';
-
+import { SocialIcon } from 'react-social-icons'
 import { config } from 'config'
+
 import './index.scss'
+import '../utils/ga.js'
 
 export default class Index extends React.Component {
   render () {
@@ -40,7 +41,7 @@ export default class Index extends React.Component {
           <div className="social-networks">
             {
               socialNetworks.map(socialNetwork => {
-                return <SocialIcon url={socialNetwork} color="#526d7a" style={{ height: 31, width: 31, margin: 5 }} />
+                return <SocialIcon rel="me" url={socialNetwork} color="#526d7a" style={{ height: 31, width: 31, margin: 5 }} />
               })
             }
           </div>
