@@ -5,11 +5,15 @@ import Helmet from 'react-helmet'
 import { Section, Avatar, Heading, Text, Breadcrumbs } from 'rebass'
 import { SocialIcon } from 'react-social-icons'
 import { config } from 'config'
+import { initialize, pageview } from 'react-ga'
 
 import './index.scss'
-import '../utils/ga.js'
 
 export default class Index extends React.Component {
+  componentDidMount() {
+    initialize('UA-88597333-1')
+    pageview(window.location.pathname)
+  }
   render () {
     const socialNetworks = [
       'http://twitter.com/jdinartejesus',
@@ -40,8 +44,8 @@ export default class Index extends React.Component {
           </div>
           <div className="social-networks">
             {
-              socialNetworks.map(socialNetwork => {
-                return <SocialIcon rel="me" url={socialNetwork} color="#526d7a" style={{ height: 31, width: 31, margin: 5 }} />
+              socialNetworks.map((socialNetwork, index) => {
+                return <SocialIcon key={index} rel="me" url={socialNetwork} color="#526d7a" style={{ height: 31, width: 31, margin: 5 }} />
               })
             }
           </div>
