@@ -1,2 +1,7 @@
 siteTitle="Dinarte Jesus"
 linkPrefix = "/"
+socialNetworks = [
+  'http://twitter.com/jdinartejesus',
+  'http://github.com/jdinartejesus',
+  'http://linkedin.com/in/jdinartejesus'
+]
