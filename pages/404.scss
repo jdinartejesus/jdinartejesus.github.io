@@ -1,0 +1,12 @@
+@import '../styles/variables';
+
+.four-or-four {
+
+  &-title {
+    color: $title-color;
+  }
+
+  &-sub {
+    color: $subtitle-color;
+  }
+}
