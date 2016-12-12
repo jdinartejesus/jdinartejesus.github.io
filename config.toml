@@ -1,5 +1,6 @@
 siteTitle="Dinarte Jesus"
 linkPrefix = "/"
+googleAnalytics = "UA-88597333-1"
 socialNetworks = [
   'http://twitter.com/jdinartejesus',
   'http://github.com/jdinartejesus',

@@ -1,6 +1,7 @@
 import { initialize, pageview } from 'react-ga'
+import { config } from 'config'
 
-initialize('UA-88597333-1');
+initialize(config.googleAnalytics);
 
 exports.onRouteUpdate = (state, page, pages) => {
   pageview(state.pathname);
