@@ -1,19 +1,24 @@
-import React from 'react'
-import { Container } from 'rebass'
-import { prefixLink } from 'gatsby-helpers'
-import { Link } from 'react-router'
+import React, { PropTypes, Component } from 'react'
 
-import './style.scss'
+import Social from '../social/'
 
-export default class Footer extends React.Component {
+class Footer extends Component {
   render() {
+    const { socialUrls } = this.props
     return (
-      <footer>
-        <Container>
-          <hr/>
-          <p>© 2016. Dinarte Jesus. Some Rights Reserved.</p>
-        </Container>
+      <footer className='center'>
+        <hr className='my2 max-width-2 mx-auto' style={{background: '#eee'}} />
+        <p className='m0 h5'>© 2016. Dinarte Jesus. Some Rights Reserved.</p>
+        <Social socialUrls={socialUrls} />
       </footer>
     )
   }
 };
+
+const { arrayOf, string } = PropTypes
+
+Footer.propTypes = {
+  socialUrls: arrayOf(string)
+}
+
+export default Footer
