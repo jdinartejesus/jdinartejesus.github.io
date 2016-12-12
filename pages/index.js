@@ -4,10 +4,10 @@ import { config } from 'config'
 
 import './index.scss'
 
-import Twitter from '../components/twitter/'
 import Social from '../components/social/'
 
 export default class Index extends React.Component {
+
   render () {
     return (
       <div className="homepage center">
@@ -25,7 +25,6 @@ export default class Index extends React.Component {
               But I also love to work on other open source projects, like at <a className="text-decoration-none blue" href="https://mozilla.com">@Mozilla</a> and others also available on my Github!
             </p>
           </div>
-          <Twitter />
         </main>
       </div>
     )

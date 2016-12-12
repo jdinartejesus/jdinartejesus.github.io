@@ -20,7 +20,6 @@ module.exports = React.createClass({
     if (process.env.NODE_ENV === 'production') {
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
-
     return (
       <html lang="en">
         <head>
@@ -42,5 +41,5 @@ module.exports = React.createClass({
         </body>
       </html>
     )
-  },
+  }
 })
