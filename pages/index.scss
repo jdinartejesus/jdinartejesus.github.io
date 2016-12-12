@@ -1,8 +1,6 @@
-.homepage {
-  $title-color: #444;
-  $subtitle-color: #777;
-  $links-color: #2b99ff;
+@import '../styles/variables';
 
+.homepage {
   header {
     margin: 3rem 0 1rem;
 
@@ -24,8 +22,8 @@
       max-width: 700px;
 
       a {
-        text-decoration: none;
         color: $links-color;
+        text-decoration: none;
       }
     }
   }

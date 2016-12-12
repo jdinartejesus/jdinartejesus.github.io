@@ -1,27 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { Container } from 'rebass'
-import { prefixLink } from 'gatsby-helpers'
+import React, { Component, PropTypes } from 'react'
+import { config } from 'config'
 
 import { rhythm } from '../utils/typography'
 import Footer from '../components/footer'
 
-import '../styles/default.scss'
+import '../styles/index.css'
+import '../styles/_template.scss'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    }
-  },
+class Template extends Component {
   render () {
     return (
       <div className="wrapper">
-        <Container>
+        <div className="max-width-3 mx-auto">
           {this.props.children}
-          <Footer/>
-        </Container>
+          <Footer socialUrls={config.socialNetworks}/>
+        </div>
       </div>
     )
-  },
-})
+  }
+}
+
+const { any } = PropTypes
+
+Template.propTypes = {
+  children: any
+}
+
+export default Template
