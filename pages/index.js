@@ -1,54 +1,31 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
-import { Section, Avatar, Heading, Text, Breadcrumbs } from 'rebass'
-import { SocialIcon } from 'react-social-icons'
 import { config } from 'config'
-import { initialize, pageview } from 'react-ga'
 
 import './index.scss'
 
+import Twitter from '../components/twitter/'
+import Social from '../components/social/'
+
 export default class Index extends React.Component {
-  componentDidMount() {
-    initialize('UA-88597333-1')
-    pageview(window.location.pathname)
-  }
   render () {
-    const socialNetworks = [
-      'http://twitter.com/jdinartejesus',
-      'http://github.com/jdinartejesus',
-      'http://linkedin.com/in/jdinartejesus'
-    ]
     return (
-      <div className="homepage" style={{textAlign: "center"}}>
-        <Helmet
-          title={config.siteTitle}
-          meta={[
-            {"name": "description", "content": "Personal Website Dinarte Jesus"},
-            {"name": "keywords", "content": "portfolio, website, dinartejesus, jdinartejesus"},
-          ]}
-        />
-        <header>
-          <Avatar circle size={192} src="./images/profile.jpg" />
-          <h1 className="author">Dinarte Jesus</h1>
-          <h3 className="interests">Front-End Developer - Entrepreneur - Human</h3>
+      <div className="homepage center">
+        <Helmet title={config.siteTitle} />
+        <header className="my3">
+          <img className="circle" src="./images/profile.jpg" width="192" height="192" alt="Profile Picture"/>
+          <h1 className="author m0">Dinarte Jesus</h1>
+          <h3 className="interests m0">Front-End Developer - Entrepreneur - Human</h3>
         </header>
         <main>
-          <div className="introduction">
+          <div className="introduction h4 my1 mx-auto">
             <p>
               Hey! I'm Dinarte, nice to meet you. I'm a developer passionate about web and startups.
-              I'm currently working at <a href="https://zenmate.com">@ZenMate</a> contributing for the freedom of the internet.
-              But I also love to work on other open source projects, like at <a href="https://mozilla.com">@Mozilla</a> and others also available on my Github!
+              I'm currently working at <a className="text-decoration-none blue" href="https://zenmate.com">@ZenMate</a> contributing for the freedom of the internet.
+              But I also love to work on other open source projects, like at <a className="text-decoration-none blue" href="https://mozilla.com">@Mozilla</a> and others also available on my Github!
             </p>
           </div>
-          <div className="social-networks">
-            {
-              socialNetworks.map((socialNetwork, index) => {
-                return <SocialIcon key={index} rel="me" url={socialNetwork} color="#526d7a" style={{ height: 31, width: 31, margin: 5 }} />
-              })
-            }
-          </div>
+          <Twitter />
         </main>
       </div>
     )
