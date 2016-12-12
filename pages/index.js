@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 
@@ -6,8 +6,7 @@ import './index.scss'
 
 import Social from '../components/social/'
 
-export default class Index extends React.Component {
-
+export default class Index extends Component {
   render () {
     return (
       <div className="homepage center">
