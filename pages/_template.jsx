@@ -1,16 +1,24 @@
 import React, { Component, PropTypes } from 'react'
-import { config } from 'config'
+import Helmet from 'react-helmet'
 
-import { rhythm } from '../utils/typography'
+import { config } from 'config'
 import Footer from '../components/footer'
 
 import '../styles/index.css'
 import '../styles/_template.scss'
 
 class Template extends Component {
+  getPageData () {
+    let pageIndex = this.props.routes.length - 1
+    let pageData = this.props.routes[pageIndex].page.data
+    return pageData
+  }
   render () {
+    const title = this.getPageData().title || config.default.title
+    const description = this.getPageData().description || config.default.description
     return (
       <div className="wrapper">
+        <Helmet title={title} meta={[{name: 'description', content: description}]} />
         <div className="max-width-3 mx-auto">
           {this.props.children}
           <Footer socialUrls={config.socialNetworks}/>

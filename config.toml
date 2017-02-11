@@ -1,4 +1,4 @@
-siteTitle="Dinarte Jesus"
+default = { title = "Dinarte Jesus", description = "Welcome to my place on the web, I'm a web developer passionate about web and startups" }
 linkPrefix = "/"
 googleAnalytics = "UA-88597333-1"
 socialNetworks = [

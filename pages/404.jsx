@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-
 import './404.scss'
 
-class FourOrFour extends Component {
+exports.data = {
+  title: 'ups 404, NOT FOUND',
+  path: '/404.html'
+}
+
+export default class FourOrFour extends Component {
   render () {
     return (
       <div className="four-or-four center mt4">
@@ -14,4 +18,3 @@ class FourOrFour extends Component {
   }
 }
 
-export default FourOrFour
