@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 import { config } from 'config'
 import Footer from '../components/footer'
+import Navigation from '../components/navigation'
 
 import '../styles/index.css'
 import '../styles/_template.scss'
@@ -21,6 +22,7 @@ class Template extends Component {
         <Helmet title={title} meta={[{name: 'description', content: description}]} />
         <div className="max-width-3 mx-auto">
           {this.props.children}
+          <Navigation />
           <Footer socialUrls={config.social} />
         </div>
       </div>
