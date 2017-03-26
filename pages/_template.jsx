@@ -21,7 +21,7 @@ class Template extends Component {
         <Helmet title={title} meta={[{name: 'description', content: description}]} />
         <div className="max-width-3 mx-auto">
           {this.props.children}
-          <Footer socialUrls={config.socialNetworks}/>
+          <Footer socialUrls={config.social} />
         </div>
       </div>
     )

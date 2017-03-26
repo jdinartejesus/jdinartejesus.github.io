@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { config } from 'config'
 
 import './index.scss'
-
-import Social from '../components/social/'
 
 export default class Index extends Component {
   render () {
@@ -18,8 +15,8 @@ export default class Index extends Component {
           <div className="introduction h4 my1 mx-auto">
             <p>
               Hey! I'm Dinarte, nice to meet you. I'm a web developer passionate about web and startups.
-              I'm currently working at <a className="text-decoration-none blue" href="https://zenmate.com">@ZenMate</a> contributing for the freedom of the internet.
-              But I also love to work on other open source projects, like at <a className="text-decoration-none blue" href="https://mozilla.com">@Mozilla</a> and others also available on my Github!
+              I'm living in Germany where I worked <a className="text-decoration-none blue" href="https://zenmate.com">@ZenMate</a> and nuboLab/Voxelbrain.
+              Usually, I'm also contributing to open source projects, like at <a className="text-decoration-none blue" href="https://mozilla.com">@Mozilla</a> and others also available on my <a className="text-decoration-none blue" href="https://github.com/jdinartejesus">Github</a>!
             </p>
           </div>
         </main>
